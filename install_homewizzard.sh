@@ -268,3 +268,16 @@ echo "  - Remote Console: http://[IP van Cerbo]"
 echo "  - VRM Portaal:    https://vrm.victronenergy.com"
 echo "============================================================"
 echo ""
+
+echo ""
+read -p "Wil je de Cerbo nu herstarten? (aanbevolen) (j/n): " REBOOT
+if [[ "$REBOOT" == "j" || "$REBOOT" == "J" ]]; then
+    echo ""
+    echo "Cerbo wordt herstart... Verbinding wordt verbroken."
+    echo "Wacht 60 seconden en verbind opnieuw via PuTTY."
+    sleep 3
+    reboot
+else
+    echo ""
+    echo "Geen herstart. Controleer het VRM dashboard."
+fi
