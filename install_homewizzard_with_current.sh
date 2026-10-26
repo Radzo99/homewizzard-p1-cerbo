@@ -196,7 +196,7 @@ echo "  Stap 7 - Python script vervangen (met stroomteken fix)"
 echo "============================================================"
 
 wget -q -O /data/dbus-Home-Wizzard-Energy-P1/dbus-home-wizzard-energy-p1.py \
-    https://raw.githubusercontent.com/Radzo99/homewizzard-p1-cerbo/main/dbus-home-wizzard-energy-p1-with-current.py
+    https://raw.githubusercontent.com/Radzo99/homewizzard-p1-cerbo/refs/heads/main/dbus-home-wizzard-energy-p1-with-current.py
 
 if [ $? -ne 0 ] || [ ! -s /data/dbus-Home-Wizzard-Energy-P1/dbus-home-wizzard-energy-p1.py ]; then
     echo "FOUT: Script downloaden mislukt."
