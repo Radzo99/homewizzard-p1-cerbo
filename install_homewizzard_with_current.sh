@@ -203,11 +203,11 @@ if [ $? -ne 0 ] || [ ! -s /data/dbus-Home-Wizzard-Energy-P1/dbus-home-wizzard-en
     exit 1
 fi
 
-CHECK=$(grep -c "stroomteken" /data/dbus-Home-Wizzard-Energy-P1/dbus-home-wizzard-energy-p1.py 2>/dev/null)
+CHECK=$(grep -c "abs(meter_data\['active_current_l1_a'\])" /data/dbus-Home-Wizzard-Energy-P1/dbus-home-wizzard-energy-p1.py 2>/dev/null)
 if [ "$CHECK" -gt 0 ]; then
     echo "✓ Script met stroomteken fix geinstalleerd"
 else
-    echo "FOUT: Script downloaden mislukt - stroomteken fix niet gevonden."
+    echo "FOUT: Script downloaden mislukt - fix niet gevonden."
     exit 1
 fi
 
